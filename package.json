@@ -1,0 +1,35 @@
+{
+  "name": "catapult",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swahed/catapult.git"
+  },
+  "author": "swahed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swahed/catapult/issues"
+  },
+  "homepage": "https://github.com/swahed/catapult#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "browser-sync": "^2.18.2",
+    "browserify": "^13.1.1",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "guid": "0.0.12",
+    "gulp": "^3.9.1",
+    "gulp-live-server": "0.0.30",
+    "jquery": "^3.1.1",
+    "mongoose": "^4.7.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}

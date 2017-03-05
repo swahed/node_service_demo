@@ -1,0 +1,21 @@
+{
+  "name": "catapult",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "swahed"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "skeleton": "~2.0.4"
+  }
+}
