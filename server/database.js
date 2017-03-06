@@ -32,9 +32,9 @@ module.exports.connect = function(dbName){ // catapult
 			points : 60
 		}];
 
-		seedData.forEach(function(person){
-			console.log("saving");
-			new Score(person).save(function (err) {
+		seedData.forEach(function(score){
+			console.log("Seeding DB with entry deviceID: " + score.deviceID + " score:" + score.points + ".");
+			new Score(score).save(function (err) {
 			  if (err) return console.error(err);
 			});
 		});

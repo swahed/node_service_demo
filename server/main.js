@@ -6,7 +6,7 @@ const dbModule = require("./database.js");
 const db = dbModule.connect("node_service_demo");
 
 server.get("/", function(req, res) {	
-	var viewModel = { message : "Hello World!" };
+	var viewModel = { message : "The simplest game in the world!" };
 	res.render('./../app/index.ejs', viewModel);
 })
 .use(express.static(__dirname + "/../app"))

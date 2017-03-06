@@ -4,7 +4,6 @@ module.exports = function(server) {
 
     server.route("/api/ranking").post(function(req, res) {
         if(!req.body) {
-            console.log("body empty");
             res.status(500).send();
             return;
         }
@@ -13,10 +12,8 @@ module.exports = function(server) {
 
         Score.findOne({ deviceID: score.deviceID }, function(error, doc){
             if(doc) {
-                console.log("existing");
                 doc.points = score.points;
             } else {
-                console.log("new");
                 doc = new Score(score);
             }
 
@@ -39,7 +36,7 @@ module.exports = function(server) {
     };*/
 
      function getRanking(deviceID, callback) {
-         Score.find().sort({ points: 1 }).exec(function(error, data) { 
+         Score.find().sort({ points: -1 }).exec(function(error, data) { 
             if(!data || data.length < 1) {
                 return 0;   
             } else {
@@ -47,7 +44,7 @@ module.exports = function(server) {
                     return d.deviceID === deviceID;
                 })[0];               
 
-                const index = data.indexOf(item);
+                const index = data.indexOf(item) + 1;
                 callback(index);
             }
         });
